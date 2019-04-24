@@ -1,0 +1,103 @@
+body, html *{
+    background: #f9fafc; 
+    font-family: 'Open Sans', sans-serif;
+     margin-left:10px; 
+}
+
+.company_name{
+    display: inline-block;
+}
+header, div.content{
+    position: relative;
+}
+nav{
+    display: inline; 
+    position: absolute;
+    left: 67em;
+    top: 1em;
+    transform: translateY(-10px);
+}
+a, .main_text{
+    color:#69696a;
+}
+a{
+    text-decoration: none;
+     padding:10px; 
+}
+div{
+    padding-top:10%;
+    width:30%;
+} 
+.chirpus{
+    font-size: 35px;
+}
+.hire_btn, .scroll_bar{
+    background-color: #000;
+    color: white;
+    height:40px; 
+    width: 100px;
+    border-radius: 20px;
+    border:none;
+}
+
+div.vertical_line{
+    width: 2px;
+    height: 30px;
+    background-color: grey;
+    float:left; 
+    margin-left:20px;
+    
+} 
+
+.main_text{
+    padding-left:20px;
+}
+
+div.cirles{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    left: 50em;
+    top: 8em;
+    
+}
+.big_circle{
+    position: absolute;
+    background:rgba(247, 136, 167, 0.6);
+    height:80%;
+    width: 80%;
+    border-radius:50%;
+    left: 14em;
+    }
+.small_circle{
+        position: relative;
+        background:rgba(207, 130, 213, 0.6);
+        height:35%;
+        width: 35%;
+        border-radius: 50%;
+        left: 35em;
+        bottom: -4em;
+    } 
+.medium_circle{
+    position: absolute;
+    background:rgba(247, 193, 162, 0.7);
+    height:50%;
+    width:50%;
+    border-radius:50%;
+    left:31em;
+    bottom:-5em;
+    z-index: 1;
+}
+.scroll_bar{
+    position:fixed;
+    left: 50em;
+    bottom:1em;
+}
+/* div.scroll_bar{
+    position:fixed;
+    border-radius: 10px;
+    background-color: black;  
+    font: white;
+} */
+
+
