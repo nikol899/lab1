@@ -1,103 +1,142 @@
-body, html *{
-    background: #f9fafc; 
+body{
+    margin:10px;
+    padding:0;
+    background-color: #f9fafc;
     font-family: 'Open Sans', sans-serif;
-     margin-left:10px; 
 }
-
-.company_name{
-    display: inline-block;
-}
-header, div.content{
-    position: relative;
-}
-nav{
-    display: inline; 
-    position: absolute;
-    left: 67em;
-    top: 1em;
-    transform: translateY(-10px);
-}
-a, .main_text{
+a, p{
     color:#69696a;
 }
+ div>p:nth-child(1){
+    font-size: 30px;
+    font-weight:bold;
+    color:black;
+}
+p:nth-child(1){
+    color:black;
+}
+header, nav, a{
+    display: flex;
+    flex-direction: column; 
+} 
 a{
+    /* align-items: space-evenly; */
     text-decoration: none;
-     padding:10px; 
-}
-div{
-    padding-top:10%;
-    width:30%;
-} 
-.chirpus{
-    font-size: 35px;
-}
-.hire_btn, .scroll_bar{
-    background-color: #000;
-    color: white;
-    height:40px; 
-    width: 100px;
-    border-radius: 20px;
-    border:none;
-}
-
-div.vertical_line{
-    width: 2px;
     height: 30px;
-    background-color: grey;
-    float:left; 
-    margin-left:20px;
-    
-} 
-
-.main_text{
-    padding-left:20px;
 }
 
-div.cirles{
-    position: absolute;
-    height: 100%;
-    width:100%;
-    left: 50em;
-    top: 8em;
-    
-}
-.big_circle{
-    position: absolute;
-    background:rgba(247, 136, 167, 0.6);
-    height:80%;
-    width: 80%;
-    border-radius:50%;
-    left: 14em;
-    }
-.small_circle{
-        position: relative;
-        background:rgba(207, 130, 213, 0.6);
-        height:35%;
-        width: 35%;
-        border-radius: 50%;
-        left: 35em;
-        bottom: -4em;
-    } 
-.medium_circle{
-    position: absolute;
-    background:rgba(247, 193, 162, 0.7);
-    height:50%;
-    width:50%;
-    border-radius:50%;
-    left:31em;
-    bottom:-5em;
-    z-index: 1;
+
+.scroll_bar, .hire{
+    width: 100%;
+    height: 34px;
+    background-color:#000;
+    border-radius: 19px;
+    color:white;
+    text-align:center;
 }
 .scroll_bar{
-    position:fixed;
-    left: 50em;
-    bottom:1em;
+    border:none;
 }
-/* div.scroll_bar{
-    position:fixed;
-    border-radius: 10px;
-    background-color: black;  
-    font: white;
-} */
+p:nth-child(2){
+    border-left: 3px solid#69696a;
+    padding-left:13px;
+    margin-left:4px;
+    
+}
+@media only screen and (min-width:768px){
+    header, nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        flex:1;
+        align-items:baseline;
+    }
+    a{
+        justify-content: space-between;
+        width:72px;
+    }
+    .scroll_bar{
+        position:fixed;
+        left: 43%;
+        top:92%
+    }
+    .hire, .scroll_bar{
+        width: 105px;
+    }
+    p:nth-child(2){
+        width:38%;
+        float:left;
+    }
+    div.circles{
+        position: relative;
+        width:55%;
+        height:215px;
+        float:left;
+    
+    }
+    .clearfix{
+        clear:both;
+    }
+    .cirles{
+        float:right;
+        width: 40%;
+}
+    .big_circle{
+        position: absolute;
+        height: 121%;
+        width: 66%;
+        border-radius: 50%;
+        background-color: rgba(247, 136, 167, 0.6);
+        right:2em;
+    }
+    .medium_circle{
+        position: absolute;
+        height: 50%;
+        width: 31%;
+        background-color: rgba(247, 193, 162, 0.7);
+        border-radius: 50%;
+        right: -2em;
+        top: 9em;
+        z-index: 1;}
+    .small_circle{
+        position: absolute;
+        height: 37%;
+        width: 21%;
+        border-radius: 50%;
+        background-color: rgba(207, 130, 213, 0.6);
+        right: -2em;
+        top: 5em;
+    }
+} 
+@media only screen and (min-width:1024px){
+    .big_circle{
+        height: 167%;
+        width: 72%;
+    }
+    .medium_circle{
+        width: 39%;
+        height: 94%;
+        right:-3em;
+        top:12em;
+    }
+    .small_circle{
+        width: 24%;
+        height: 51%;
+        left: 30em;
+        top: 7em;
+    }
+}
+@media only screen and(min-width:1440px){
+    .big_circle{
+        right: 10em;
+        height: 158%;
+        width: 63%;
+    }
+    .small_circle{
+        height:40%;
+        width:40%;
+        left:30em;
+    }
+}
+
 
 
